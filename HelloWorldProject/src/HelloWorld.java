@@ -23,35 +23,58 @@ public class HelloWorld {
 			decision = myObj.nextInt();
 		}
 
-		if(decision==1){// start if
-			System.out.println("What is the binary number?");
-			String bNum = myObj.nextLine();
-			int outDecimal=0;
-			int location=0;
-			for(int x =bNum.length()-1;x>=0;x--){// start for loop
-				if(bNum.charAt(x)==('1')){// start mini if
-					outDecimal+=Math.pow(2, location);
-					location++;
-				}// end mini if
-			}// end for loop
-			System.out.println(outDecimal);
+		if(decision == 1 ){
+			binaryToDecimal();
+		}
+		else{
+			decimalToBinary();
+		}
+
+	public static int binaryToDecimal(){// start binaryToDecmial
+		Scanner myObj = new Scanner(System.in);
+		System.out.println("What is the binary number?");
+		String bNum = myObj.nextLine();
+		int outDecimal=0;
+		int location=0;
+		for(int x =bNum.length()-1;x>=0;x--){// start for loop
+			if(bNum.charAt(x)==('1')){// start mini if
+				outDecimal+=Math.pow(2, location);
+				location++;
+			}// end mini if
+		}// end for loop
+		System.out.println(outDecimal);
+	}// end binaryToDecmial
+
+	public static decimalToBinary(){// start decimalToBinary
+		Scanner myObj = new Scanner(System.in);
+		System.out.println("What is the decimal number?");
+		int dNum = myObj.nextInt();
+		String outBinary;
+
+		for(int x =dnum;x<0;x--){// start for
+
+			outBinary+=dnum%2;
+			dnum=dnum/2;
+			
+
+		}
+			
+
+
+		}// end for 
+			
 
 
 
 
 
-		}// end if 
-		else{// start else
-			System.out.println("What is the decimal number?");
-			int dNum = myObj.nextInt();
-			String outBinary;
-		}// end else
 
-		
+
+	} // end decimalToBinary
 
 
 
 
-	}
+	} // end main
 
-}
+} // end class
