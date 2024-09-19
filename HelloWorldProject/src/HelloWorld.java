@@ -23,14 +23,15 @@ public class HelloWorld {
 			decision = myObj.nextInt();
 		}
 
-		if(decision == 1 ){
+		if(decision == 1 )
 			binaryToDecimal();
-		}
-		else{
+		
+		else
 			decimalToBinary();
-		}
 
-	public static int binaryToDecimal(){// start binaryToDecmial
+	} // end main
+
+	public static void binaryToDecimal(){// start binaryToDecmial
 		Scanner myObj = new Scanner(System.in);
 		System.out.println("What is the binary number?");
 		String bNum = myObj.nextLine();
@@ -45,7 +46,7 @@ public class HelloWorld {
 		System.out.println(outDecimal);
 	}// end binaryToDecmial
 
-	public static decimalToBinary(){// start decimalToBinary
+	public static void decimalToBinary(){// start decimalToBinary
 		Scanner myObj = new Scanner(System.in);
 		System.out.println("What is the decimal number?");
 		int dNum = myObj.nextInt();
@@ -58,10 +59,7 @@ public class HelloWorld {
 			
 
 		}
-			
-
-
-		}// end for 
+		System.out.println(outBinary);	
 			
 
 
@@ -74,7 +72,5 @@ public class HelloWorld {
 
 
 
-
-	} // end main
 
 } // end class
