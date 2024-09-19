@@ -9,25 +9,38 @@ import java.util.Scanner;
 public class HelloWorld {
 
 	public static void main(String[] args) {
-
-		boolean rightChoice= true;
+		boolean cont= true;
 		Scanner myObj = new Scanner(System.in);
-		System.out.println("Welcome!  You have the following options:");
-		System.out.println("1. Binary to Decimal");
-		System.out.println("2. Decimal to Binary");
-		System.out.println("Which type of conversion would you like to perform?");
-		int decision = myObj.nextInt();
 
-		while (decision != 1 && decision !=2) {
+		while(cont){
+			System.out.println("Welcome!  You have the following options:");
+			System.out.println("1. Binary to Decimal");
+			System.out.println("2. Decimal to Binary");
 			System.out.println("Which type of conversion would you like to perform?");
-			decision = myObj.nextInt();
+			int decision = myObj.nextInt();
+
+			while (decision != 1 && decision !=2) {
+				System.out.println("Which type of conversion would you like to perform?");
+				decision = myObj.nextInt();
+				myObj.nextLine();
+			}
+
+			if(decision == 1 )
+				binaryToDecimal();
+			
+			else
+				decimalToBinary();
+
+			System.out.println("Do you want to continue - yes or no?");
+			String var= myObj.nextLine();
+
+			if(var.equals("no"))
+				cont=false;
+
 		}
 
-		if(decision == 1 )
-			binaryToDecimal();
-		
-		else
-			decimalToBinary();
+
+
 
 	} // end main
 
@@ -44,25 +57,25 @@ public class HelloWorld {
 			}// end mini if
 		}// end for loop
 		System.out.println(outDecimal);
+		System.out.println("Do you want to continue - yes or no?");
+		String var= myObj.nextLine();
 	}// end binaryToDecmial
 
 	public static void decimalToBinary(){// start decimalToBinary
 		Scanner myObj = new Scanner(System.in);
 		System.out.println("What is the decimal number?");
 		int dNum = myObj.nextInt();
-		String outBinary;
+		myObj.nextLine();
+		String outBinary="";
 
-		for(int x =dnum;x<0;x--){// start for
-
-			outBinary+=dnum%2;
-			dnum=dnum/2;
-			
-
+		for(int x =dNum;x>0;x/=2){// start for
+			outBinary= (x%2)+ outBinary;
 		}
 		System.out.println(outBinary);	
 			
 
-
+		System.out.println("Do you want to continue - yes or no?");
+		String var= myObj.nextLine();
 
 
 
