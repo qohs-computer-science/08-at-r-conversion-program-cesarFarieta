@@ -1,10 +1,11 @@
 import java.util.Scanner;
 
 /*
- * TODO: Name
- * TODO: Date
- * TODO: Class Period
- * TODO: Program Description
+ * Cesar Farieta
+ * September 20
+ * 3
+ * This program as the usser if they want to do a conversion from Binary to decimal or if they want to do demial to binary. Then depending on what conversion they pick
+ * 
  */
 public class HelloWorld {
 
@@ -18,7 +19,7 @@ public class HelloWorld {
 			System.out.println("2. Decimal to Binary");
 			System.out.println("Which type of conversion would you like to perform?");
 			int decision = myObj.nextInt();
-
+			myObj.nextLine();
 			while (decision != 1 && decision !=2) {
 				System.out.println("Which type of conversion would you like to perform?");
 				decision = myObj.nextInt();
@@ -31,16 +32,16 @@ public class HelloWorld {
 			else
 				decimalToBinary();
 
+
 			System.out.println("Do you want to continue - yes or no?");
 			String var= myObj.nextLine();
-
 			if(var.equals("no"))
 				cont=false;
-
+					
+			
+			
 		}
-
-
-
+		
 
 	} // end main
 
@@ -53,12 +54,11 @@ public class HelloWorld {
 		for(int x =bNum.length()-1;x>=0;x--){// start for loop
 			if(bNum.charAt(x)==('1')){// start mini if
 				outDecimal+=Math.pow(2, location);
-				location++;
 			}// end mini if
+			location++;
 		}// end for loop
-		System.out.println(outDecimal);
-		System.out.println("Do you want to continue - yes or no?");
-		String var= myObj.nextLine();
+		System.out.println("The decimal equivalent is: " + outDecimal);
+
 	}// end binaryToDecmial
 
 	public static void decimalToBinary(){// start decimalToBinary
@@ -71,15 +71,8 @@ public class HelloWorld {
 		for(int x =dNum;x>0;x/=2){// start for
 			outBinary= (x%2)+ outBinary;
 		}
-		System.out.println(outBinary);	
+		System.out.println("The binary equivalent is: "+ outBinary);	
 			
-
-		System.out.println("Do you want to continue - yes or no?");
-		String var= myObj.nextLine();
-
-
-
-
 
 	} // end decimalToBinary
 
