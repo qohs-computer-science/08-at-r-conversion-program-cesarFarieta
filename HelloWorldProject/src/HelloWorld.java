@@ -6,7 +6,7 @@ import java.util.Scanner;
  * 3
  * This program asks the user if they want to do a conversion from Binary to decimal or if they want to do demial to binary. Then depending on what conversion they pick
  * the program asks the user for a decmial or a binary number and then it converts them to either one. After the conversion is created the program asks them if they want to continue coverting. 
- * With the answer of the user the program either runs again or it stops runnng. 
+ * With the answer of the user the program either runs again or it stops runnng.
  */
 public class HelloWorld {
 
